@@ -77,12 +77,9 @@
 		D0744C031EC6009700349892 /* AudioEngineTest */ = {
 			isa = PBXGroup;
 			children = (
-				D0744C041EC6009700349892 /* AppDelegate.swift */,
 				D0744C061EC6009700349892 /* ViewController.swift */,
 				D0744C081EC6009700349892 /* Main.storyboard */,
-				D0744C0B1EC6009700349892 /* Assets.xcassets */,
-				D0744C0D1EC6009700349892 /* LaunchScreen.storyboard */,
-				D0744C101EC6009700349892 /* Info.plist */,
+				D0744C241EC6069D00349892 /* Supporting Files */,
 			);
 			path = AudioEngineTest;
 			sourceTree = "<group>";
@@ -94,6 +91,17 @@
 				D0744C1B1EC6009700349892 /* Info.plist */,
 			);
 			path = AudioEngineTestTests;
+			sourceTree = "<group>";
+		};
+		D0744C241EC6069D00349892 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0744C041EC6009700349892 /* AppDelegate.swift */,
+				D0744C0B1EC6009700349892 /* Assets.xcassets */,
+				D0744C0D1EC6009700349892 /* LaunchScreen.storyboard */,
+				D0744C101EC6009700349892 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +154,7 @@
 				TargetAttributes = {
 					D0744C001EC6009700349892 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 6X6WDBT46Y;
 						ProvisioningStyle = Automatic;
 					};
 					D0744C141EC6009700349892 = {
@@ -339,11 +348,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6X6WDBT46Y;
 				INFOPLIST_FILE = AudioEngineTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bajupa.AudioEngineTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -351,11 +362,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6X6WDBT46Y;
 				INFOPLIST_FILE = AudioEngineTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bajupa.AudioEngineTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -406,6 +419,7 @@
 				D0744C201EC6009700349892 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0744C211EC6009700349892 /* Build configuration list for PBXNativeTarget "AudioEngineTestTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +428,7 @@
 				D0744C231EC6009700349892 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

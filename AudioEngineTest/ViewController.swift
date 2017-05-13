@@ -7,19 +7,52 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var display: UILabel!
+    var audioEngine: AVAudioEngine = AVAudioEngine()
+    
+    @IBAction func touchStart(_ sender: UIButton) {
+        let buttonTitle = sender.currentTitle!
+        let currentDisplayContent = display.text!
+        display.text = currentDisplayContent + buttonTitle
+        tryAudio()
     }
+    
+    private func tryAudio() {
+        print("Start")
+        let mixer = audioEngine.mainMixerNode;
+        mixer.outputVolume = 0;
+        
+        if let inputNode = audioEngine.inputNode {
+            audioEngine.connect(inputNode, to: mixer, format: inputNode.inputFormat(forBus: 0))
+            let usedFormat = inputNode.outputFormat(forBus: 0)
+            print("format: \(usedFormat)")
+            inputNode.installTap(onBus: 0, bufferSize: 16, format: usedFormat, block: { (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
+                print("juhu")
+            })
+            do {
+                audioEngine.prepare()
+                try audioEngine.start()
+            }
+            catch {
+                print("pfui: nix start")
+            }
+        } else {
+            print("pfui: nix inputNode")
+        }
+        
+        
+        while (true)
+        {
+            Thread.sleep(forTimeInterval: 1)
+        }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
+    
+    @IBAction func touchStop(_ sender: UIButton) {
+        audioEngine.stop()
+    }
 }
 
