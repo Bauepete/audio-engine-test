@@ -13,6 +13,8 @@
 		D0744C0C1EC6009700349892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0744C0B1EC6009700349892 /* Assets.xcassets */; };
 		D0744C0F1EC6009700349892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0744C0D1EC6009700349892 /* LaunchScreen.storyboard */; };
 		D0744C1A1EC6009700349892 /* AudioEngineTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0744C191EC6009700349892 /* AudioEngineTestTests.swift */; };
+		D0B143EF1EC73B9400AAA38E /* MicrophoneRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B143EE1EC73B9400AAA38E /* MicrophoneRecorder.swift */; };
+		D0B143F01EC73B9400AAA38E /* MicrophoneRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B143EE1EC73B9400AAA38E /* MicrophoneRecorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 		D0744C151EC6009700349892 /* AudioEngineTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioEngineTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0744C191EC6009700349892 /* AudioEngineTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngineTestTests.swift; sourceTree = "<group>"; };
 		D0744C1B1EC6009700349892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0B143EE1EC73B9400AAA38E /* MicrophoneRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrophoneRecorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,7 @@
 				D0744C061EC6009700349892 /* ViewController.swift */,
 				D0744C081EC6009700349892 /* Main.storyboard */,
 				D0744C241EC6069D00349892 /* Supporting Files */,
+				D0B143EE1EC73B9400AAA38E /* MicrophoneRecorder.swift */,
 			);
 			path = AudioEngineTest;
 			sourceTree = "<group>";
@@ -210,6 +214,7 @@
 			files = (
 				D0744C071EC6009700349892 /* ViewController.swift in Sources */,
 				D0744C051EC6009700349892 /* AppDelegate.swift in Sources */,
+				D0B143EF1EC73B9400AAA38E /* MicrophoneRecorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0744C1A1EC6009700349892 /* AudioEngineTestTests.swift in Sources */,
+				D0B143F01EC73B9400AAA38E /* MicrophoneRecorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
