@@ -11,15 +11,12 @@ import AVFoundation
 
 class MicrophoneRecorder {
     var audioEngine: AVAudioEngine
+    var inputNode: AVAudioInputNode!
     
     init() {
         audioEngine = AVAudioEngine()
-    }
-    
-    func start() {
-        print("Start")
-        
-        if let inputNode = audioEngine.inputNode {
+        inputNode = audioEngine.inputNode;
+        if inputNode != nil {
             let usedFormat = inputNode.outputFormat(forBus: 0)
             print("format: \(usedFormat)")
             inputNode.installTap(onBus: 0, bufferSize: 16, format: usedFormat, block: { (buffer, when) in
@@ -27,6 +24,14 @@ class MicrophoneRecorder {
                     print("juhu: \(String(describing: buffer.floatChannelData?.pointee[i]))")
                 }
             })
+            
+        }
+    }
+    
+    func start() {
+        print("Start")
+        
+        if inputNode != nil {
             do {
                 audioEngine.prepare()
                 try audioEngine.start()
@@ -38,7 +43,7 @@ class MicrophoneRecorder {
             print("pfui: nix inputNode")
         }
         
-        Thread.sleep(forTimeInterval: 1)
+        //Thread.sleep(forTimeInterval: 1)
     }
     
     func stop() {

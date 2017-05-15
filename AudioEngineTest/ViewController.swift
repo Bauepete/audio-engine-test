@@ -11,18 +11,26 @@ import AVFoundation
 
 class ViewController: UIViewController {
     @IBOutlet weak var display: UILabel!
-    var audioEngine: AVAudioEngine = AVAudioEngine()
+    
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    
     var recorder: MicrophoneRecorder = MicrophoneRecorder()
     
     @IBAction func touchStart(_ sender: UIButton) {
         let buttonTitle = sender.currentTitle!
-        let currentDisplayContent = display.text!
-        display.text = currentDisplayContent + buttonTitle
-        recorder.start()
-    }
+        if buttonTitle == "Start" {
+            display.text = "Started recording"
+            startButton.isEnabled = false
+            stopButton.isEnabled = true
+            recorder.start()
+        } else {
+            display.text = "Stopped recording"
+            startButton.isEnabled = true
+            stopButton.isEnabled = false
+            recorder.stop()
+        }
         
-    @IBAction func touchStop(_ sender: UIButton) {
-        recorder.stop()
     }
-}
+  }
 
